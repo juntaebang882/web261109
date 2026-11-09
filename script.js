@@ -1,38 +1,25 @@
-// //document.write("외부 스크립트 방법");
-
-// console.log("여기 부분은 웹페이지가 아니라 콘솔에 출력이 됩니다.");
-
-// let dan = 3;
-
-// console.log("**엄청나다 구구단 3단!**");
-// for(let i=1;i<=9;i++){
-//     console.log(`${dan} x ${i} = ${dan*i}`)
-// }
-// if(dan === 3){
-//     console.log("3단이 맞습니다");
-// }else{
-//     console.log("틀렸습니다.");
-// }
-// let arr = [80,70,'메롱',60];
-// console.log(arr);
-// console.log(arr[2]);
-// let stdScore = {
-//     korean : 80,
-//     math : 90,
-//     english : 70,
-//     science : 60
-// };
-// console.log(stdScore);
-// console.log(stdScore.math);
-// stdScore.name = "홍길동";
-// console.log(stdScore);
-
 // script.js: 내 영화 평점 통계(콘솔판)
 // 작성자 : 방준태(2651030)
 
 const titles = ["신세계", "크로우즈 제로", "크로우즈 제로 2", "HiGH&LOW THE MOVIE", "인터스텔라"];
 const ratings = [7.9, 7.4, 7.3, 8.4, 8.4];
 const years = [2013, 2007, 2009, 2016, 2014];
+
+//즉시 실핼 함수 만들기
+(function init(){
+    console.log("나는 함수다. 실행이 되었다.");
+})();
+
+//화살표 함수로 함수 정의하기
+const gugudan = dan => {
+    for(let i = 1;i<=9;i++){
+        console.log(`${dan} x ${i} = ${dan*i}`);
+    }
+}
+gugudan(7);
+
+const add = (num1,num2) => num1 + num2;
+console.log(add(1234,5678));
 
 let sum = 0;
 let count = 0;
